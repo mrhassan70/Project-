@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LuxurWatch - Premium Watches</title>
+  <link rel="stylesheet" href="Projectt.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">LuxurWatch</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Timeless Elegance On Your Wrist</h1>
+      <p>Discover luxury watches crafted for those who appreciate fine details and impeccable style. Elevate your look with LuxurWatch.</p>
+      <button class="btn-primary"
+        onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80">
+    </div>
+  </section>
+  <section class="products" id="products">
+    <h2>Featured Watches</h2>
+    <div class="product-list">
+      <section class="product-card">
+        <img src="4.jpg">
+        <div class="product-name">Classic Analog</div>
+        <div class="product-price">$299</div>
+        <button class="btn-buy">Buy Now</button>
+      </section>
+      <section class="product-card">
+        <img src="6.jpg">
+        <div class="product-name">Modern Silver</div>
+        <div class="product-price">$379</div>
+        <button class="btn-buy">Buy Now</button>
+      </section>
+      <section class="product-card">
+        <img src="2.jpg">
+        <div class="product-name">Royal Gold</div>
+        <div class="product-price">$499</div>
+        <button class="btn-buy">Buy Now</button>
+      </section>
+
+      <section class="product-card">
+        <img src="4.jpg" alt="">
+        <div class="product-name">SportX Digital</div>
+        <div class="product-price">$215</div>
+        <button class="btn-buy">Buy Now</button>
+      </section>
+    </div>
+  </section>
+  <section id="about">
+    <h2>About LuxurWatch</h2>
+    <p>
+      At LuxurWatch, we blend timeless craftsmanship with modern innovation to bring you the finest watches. Our mission
+      is to empower you with a timepiece that speaks volumes about your style and personality. Every watch is designed
+      with precision, passion, and premium materials, ensuring you wear nothing but excellence.
+    </p>
+  </section>
+  <section id="newsletter">
+    <h2>Stay in the Loop</h2>
+    <p>Subscribe to our newsletter for exclusive offers, watch care tips, and the latest arrivals.</p>
+    <form onsubmit="alert('Thank you for subscribing!')">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <br>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+  <section class="Project">
+    <h1>The Project Makers ✨</h1>
+    <br>
+    <h4>Hassan Ali, Abdullah Jameel, Jabbar Afridi. </h4>
+  </section>
+  <footer>
+    &copy; 2024 LuxurWatch. All rights reserved.
+    <br>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </footer>
+</body>
+
+</html>

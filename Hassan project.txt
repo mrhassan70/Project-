@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LuxWatch - Premium Watches</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  :root {
+    --primary-color: #ff6f61;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --shadow-color: rgba(255, 111, 97, 0.4);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #ff4a3d;
+  }
+
+  header {
+    padding: 20px 40px;
+    background-color: var(--surface-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    user-select: none;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+
+  nav ul li a {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 2px;
+  }
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    flex: 1 1 400px;
+    max-width: 600px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+  }
+
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #ff4a3d;
+  }
+
+  .hero-image {
+    flex: 1 1 400px;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+  }
+
+  section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    border-radius: 20px;
+  }
+
+  section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+  }
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 40px;
+  }
+
+  .product-card {
+    background-color: #282828;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .product-card img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+  }
+
+  .product-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+
+  .btn-buy {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-buy:hover {
+    background-color: var(--primary-color);
+    color: #121212;
+  }
+
+  #about {
+    background-color: var(--surface-color);
+    text-align: center;
+  }
+
+  #about p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  #contact {
+    background-color: var(--surface-color);
+    text-align: center;
+    color: var(--text-muted);
+  }
+
+  #contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1rem;
+  }
+
+  #contact input, #contact textarea {
+    background-color: #282828;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    padding: 12px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+  }
+
+  #contact input::placeholder, #contact textarea::placeholder {
+    color: var(--text-muted);
+  }
+
+  #contact button {
+    align-self: center;
+    width: 150px;
+  }
+
+  #newsletter {
+    background-color: var(--surface-color);
+    text-align: center;
+  }
+  #newsletter p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+  }
+  #newsletter form {
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  #newsletter input[type="email"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    font-size: 1rem;
+    background-color: #282828;
+    color: var(--text-color);
+    outline: none;
+  }
+  #newsletter input[type="email"]::placeholder {
+    color: var(--text-muted);
+  }
+  #newsletter button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #newsletter button:hover {
+    background-color: #ff4a3d;
+  }
+
+  footer {
+    background-color: var(--surface-color);
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    user-select: none;
+  }
+
+  footer a {
+    color: var(--primary-color);
+    margin: 0 8px;
+  }
+
+  @media(max-width: 768px) {
+    .hero {
+      flex-direction: column-reverse;
+      padding: 60px 20px;
+    }
+    .hero-text {
+      text-align: center;
+      max-width: 100%;
+      margin-top: 30px;
+    }
+    .hero-text h1 {
+      font-size: 2.8rem;
+    }
+    .product-list {
+      grid-template-columns: 1fr 1fr;
+    }
+    .review-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media(max-width: 480px) {
+    nav ul {
+      gap: 15px;
+    }
+    .product-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">LuxWatch</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Hero section with featured watch">
+  <div class="hero-text">
+    <h1>Timeless Elegance On Your Wrist</h1>
+    <p>Discover luxury watches crafted for those who appreciate fine details and impeccable style. Elevate your look with LuxWatch.</p>
+    <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Luxurious wristwatch on wrist" />
+  </div>
+</section>
+
+<section class="products" id="products" aria-label="Featured watch collection">
+  <h2>Featured Watches</h2>
+  <div class="product-list">
+
+    <article class="product-card" tabindex="0" aria-describedby="watch1-description">
+      <img src="https://images.unsplash.com/photo-1509474520651-8cd5e757a273?auto=format&fit=crop&w=400&q=80" alt="Classic analog watch with leather strap" />
+      <div class="product-name">Classic Analog</div>
+      <div class="product-price">$299</div>
+      <button class="btn-buy" aria-label="Buy Classic Analog watch">Buy Now</button>
+      <p id="watch1-description" hidden>Classic Analog watch with premium leather strap and stainless steel casing.</p>
+    </article>
+
+    <article class="product-card" tabindex="0" aria-describedby="watch2-description">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Modern silver watch with steel mesh band" />
+      <div class="product-name">Modern Silver</div>
+      <div class="product-price">$379</div>
+      <button class="btn-buy" aria-label="Buy Modern Silver watch">Buy Now</button>
+      <p id="watch2-description" hidden>Modern Silver watch with mesh steel band and minimalist design.</p>
+    </article>
+
+    <article class="product-card" tabindex="0" aria-describedby="watch3-description">
+      <img src="https://images.unsplash.com/photo-1518544880683-826fab8e6eb6?auto=format&fit=crop&w=400&q=80" alt="Luxury gold watch with black dial" />
+      <div class="product-name">Royal Gold</div>
+      <div class="product-price">$499</div>
+      <button class="btn-buy" aria-label="Buy Royal Gold watch">Buy Now</button>
+      <p id="watch3-description" hidden>Royal Gold watch featuring black dial and gold plating for a regal look.</p>
+    </article>
+
+    <article class="product-card" tabindex="0" aria-describedby="watch4-description">
+      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Sporty black digital watch with rugged strap" />
+      <div class="product-name">SportX Digital</div>
+      <div class="product-price">$215</div>
+      <button class="btn-buy" aria-label="Buy SportX Digital watch">Buy Now</button>
+      <p id="watch4-description" hidden>SportX Digital watch with digital display and durable rugged strap.</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="about" aria-label="About LuxWatch">
+  <h2>About LuxWatch</h2>
+  <p>
+    At LuxWatch, we blend timeless craftsmanship with modern innovation to bring you the finest watches. Our mission is to empower you with a timepiece that speaks volumes about your style and personality. Every watch is designed with precision, passion, and premium materials, ensuring you wear nothing but excellence.
+  </p>
+</section>
+
+<section id="newsletter">
+  <h2>Stay in the Loop</h2>
+  <p>Subscribe to our newsletter for exclusive offers, watch care tips, and the latest arrivals.</p>
+  <form onsubmit="alert('Thank you for subscribing!');">
+    <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter subscription" />
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<section id="contact" aria-label="Contact LuxWatch">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" aria-label="Your Name" required />
+    <input type="email" placeholder="Your Email" aria-label="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" aria-label="Your Message" required></textarea>
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2024 LuxWatch. All rights reserved. 
+  <br/>
+  <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</footer>
+
+</body>
+</html>
+
