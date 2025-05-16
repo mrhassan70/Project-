@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LuxerWatch | SignUp Page</title>
+    <link rel="icon" href="logo.jpg" type="image/jpg">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #363636;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 800px;
+            height: 450px;
+            background-color: rgb(12, 0, 0);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid;
+        }
+
+        .left-panel {
+            font-family: 'Segoe UI', 'senseri';
+            width: 50%;
+            background-color: #ff6f61;
+            color: rgb(10, 4, 4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .left-panel h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .left-panel p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .left-panel .register-btn {
+            background-color: transparent;
+            border: 2px solid rgb(10, 3, 3);
+            padding: 10px 30px;
+            color: rgb(7, 1, 1);
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .right-panel {
+            width: 50%;
+            padding: 40px 30px;
+        }
+
+        .right-panel h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ff6f61;
+            border-radius: 8px;
+            font-size: 14px;
+            text-color: #ff6f61
+        }
+
+        .forgot {
+            font-size: 12px;
+            float: right;
+            margin-top: -8px;
+            margin-bottom: 20px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6f61;
+            color: #110402;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .social-login-text {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-buttons button {
+            padding: 8px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #ff6f61;
+            cursor: pointer;
+        }
+
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .container {
+            box-shadow: 2px 2px 20px;
+            color: #ff6f61;
+        }
+    .log {
+        color: #110402;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <h2>Hello, SignUp Here!</h2>
+            <p>Already Have an Account?</p>
+            <button class="register-btn"><a href="login.html" class="log">Login</a></button>
+        </div>
+        <div class="right-panel">
+            <h2>SignUp</h2>
+            <form>
+                <input class="input-field" type="text" placeholder="Username" required />
+                <input class="input-field" type="Email" placeholder="Email" required />
+                <input class="input-field" type="password" placeholder="Password" required />
+                <input class="input-field" type="password" placeholder="Confirm Password" required />
+                <div class="forgot"><a href="#">Forgot password?</a></div>
+                <button type="submit" class="login-btn"><a href="store.html">Signup</a></button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

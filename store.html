@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LuxurWatch - Premium Watches</title>
+  <link rel="icon" href="logo.jpg" type="image/jpg">
   <link rel="stylesheet" href="Projectt.css">
 </head>
 
@@ -31,36 +32,57 @@
       <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80">
     </div>
   </section>
-  <section class="products" id="products">
+<section class="products" id="products">
     <h2>Featured Watches</h2>
     <div class="product-list">
-      <section class="product-card">
-        <img src="4.jpg">
-        <div class="product-name">Classic Analog</div>
-        <div class="product-price">$299</div>
-        <button class="btn-buy">Buy Now</button>
-      </section>
-      <section class="product-card">
-        <img src="6.jpg">
-        <div class="product-name">Modern Silver</div>
-        <div class="product-price">$379</div>
-        <button class="btn-buy">Buy Now</button>
-      </section>
-      <section class="product-card">
-        <img src="2.jpg">
-        <div class="product-name">Royal Gold</div>
-        <div class="product-price">$499</div>
-        <button class="btn-buy">Buy Now</button>
-      </section>
-
-      <section class="product-card">
-        <img src="4.jpg" alt="">
-        <div class="product-name">SportX Digital</div>
-        <div class="product-price">$215</div>
-        <button class="btn-buy">Buy Now</button>
-      </section>
+        <section class="product-card">
+            <img src="4.jpg" >
+            <div class="product-name">Classic Analog</div>
+            <div class="product-price">$299</div>
+            <button class="btn-buy" onclick="openModal('Classic Analog', 299, '4.jpg')">Buy Now</button>
+        </section>
+        <section class="product-card">
+            <img src="6.jpg">
+            <div class="product-name">Modern Silver</div>
+            <div class="product-price">$379</div>
+            <button class="btn-buy" onclick="openModal('Modern Silver', 379)">Buy Now</button>
+        </section>
+        <section class="product-card">
+            <img src="2.jpg">
+            <div class="product-name">Royal Gold</div>
+            <div class="product-price">$499</div>
+            <button class="btn-buy" onclick="openModal('Royal Gold', 499)">Buy Now</button>
+        </section>
+        <section class="product-card">
+            <img src="4.jpg" alt="">
+            <div class="product-name">SportX Digital</div>
+            <div class="product-price">$215</div>
+            <button class="btn-buy" onclick="openModal('SportX Digital', 215)">Buy Now</button>
+        </section>
+        <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p>Price: $<span id="modal-price"></span></p>
+        <button onclick="buyNow()" id="buyNow">Buy Now</button>
+        <br>
+        <button onclick="addToCart()" id="buyNow">Add to Cart</button>
     </div>
-  </section>
+</div>
+    </div>
+</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img src="" id="myImg"/>
+        <h2 id="modal-title"></h2>
+        <p>Price: $<span id="modal-price"></span></p>
+        <button onclick="buyNow()">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+</div>
+
   <section id="about">
     <h2>About LuxurWatch</h2>
     <p>
@@ -88,7 +110,7 @@
     </form>
   </section>
   <section class="Project">
-    <h1>The Project Makers ✨</h1>
+    <h1>The Project Builder ✨</h1>
     <br>
     <h4>Hassan Ali, Abdullah Jameel, Jabbar Afridi. </h4>
   </section>
@@ -97,6 +119,7 @@
     <br>
     <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
   </footer>
+  <script src="main.js"></script>
 </body>
 
 </html>

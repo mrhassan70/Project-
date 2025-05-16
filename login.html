@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxerWatch | Login Page</title>
+    <link rel="icon" href="logo.jpg" type="image/jpg">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            max-width: 100%;
+        }
+
+        .left-panel {
+            background-color: #ff6f61;
+            color: black;
+            width: 40%;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .left-panel h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .left-panel p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .right-panel {
+            width: 60%;
+            padding: 40px 30px;
+            background-color: black;
+            border: 1px solid #ff6f61;
+        }
+
+        .right-panel h2 {
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            border: 1px solid;
+            border-radius: 10PX;
+            border-color: #ff6f61;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .right-panel .login-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff6f61;
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            text-align: right;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .social-login {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-login span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .social-icons button {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin: 0 5px;
+            cursor: pointer;
+            background: white;
+        }
+
+        .reg-btn {
+            background-color: transparent;
+            border: 2px solid black;
+            padding: 10px 30px;
+            color: black;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 50%;
+            margin-left: 25%;
+            border-color: #1e1e1e;
+        }
+
+        a {
+            color: white;
+        }
+
+        .container {
+            box-shadow: 2px 2px 20px #ff6f61;
+        }
+        .reg {
+            color: #1e1e1e;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Hello, Welcome!</h2>
+            <p>Don't have an account?</p>
+            <button class="reg-btn"><a href="signup.html" class="reg">Register</a></button>
+        </div>
+        <div class="right-panel">
+            <h2>Login</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="login-btn"><a href="store.html">Login</a></button>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
